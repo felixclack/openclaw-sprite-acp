@@ -1,0 +1,13 @@
+{
+  "id": "sprite-acp",
+  "name": "Sprite ACP Launcher",
+  "description": "Ships a Sprite-backed ACP launcher command for OpenClaw ACPX agent overrides.",
+  "requiresPlugins": [
+    "acpx"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

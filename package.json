@@ -1,0 +1,48 @@
+{
+  "name": "@felixclack/openclaw-sprite-acp",
+  "version": "0.1.0",
+  "description": "Sprite-backed ACP launcher for OpenClaw ACPX coding workers.",
+  "type": "module",
+  "bin": {
+    "openclaw-sprite-acp": "./bin/openclaw-sprite-acp.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixclack/openclaw-sprite-acp.git"
+  },
+  "keywords": [
+    "openclaw",
+    "sprite",
+    "acp",
+    "codex",
+    "claude"
+  ],
+  "engines": {
+    "node": ">=22.19"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "runtimeExtensions": [
+      "./dist/index.js"
+    ],
+    "install": {
+      "npmSpec": "@felixclack/openclaw-sprite-acp",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.6.2"
+    },
+    "compat": {
+      "pluginApi": ">=2026.6.2"
+    }
+  }
+}
