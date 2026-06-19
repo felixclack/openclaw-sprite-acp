@@ -367,7 +367,7 @@ export function resolveLaunchPlan(options, rawRegistry = {}, cwd = process.cwd()
 }
 
 export function buildSpriteExecArgs(plan) {
-  const args = ["-s", plan.sprite, "exec", "-dir", plan.dir];
+  const args = ["-s", plan.sprite, "exec", "--dir", plan.dir];
   const envEntries = Object.entries(plan.env).sort(([a], [b]) => a.localeCompare(b));
   if (envEntries.length > 0) {
     const encodedEnv = envEntries
@@ -378,9 +378,9 @@ export function buildSpriteExecArgs(plan) {
         return `${name}=${value}`;
       })
       .join(",");
-    args.push("-env", encodedEnv);
+    args.push("--env", encodedEnv);
   }
-  args.push(plan.command, ...plan.args);
+  args.push("--", plan.command, ...plan.args);
   return args;
 }
 
