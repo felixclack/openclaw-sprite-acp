@@ -39,10 +39,10 @@
     "install": {
       "npmSpec": "@felixclack/openclaw-sprite-acp",
       "defaultChoice": "npm",
-      "minHostVersion": ">=2026.6.2"
+      "minHostVersion": ">=2026.3.31"
     },
     "compat": {
-      "pluginApi": ">=2026.6.2"
+      "pluginApi": ">=2026.3.31"
     }
   }
 }
